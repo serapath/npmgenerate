@@ -8,16 +8,10 @@ Example:
 `{cmd} new-project 'new description of project'`
 
 Options:
-    --template=[str]        Which template to use
-    --directory=[str]       Which directory templates live in.
     --name=[str]            Set name of project
     --description=[str]     Set description of project
     --update-json           extend files in target folder
 {options}
-
- - `--template` defaults to `{template}`
- - `--directory` defaults to `{directoryName}` folder
-{defaults}
 
 ## `{cmd} --help`
 

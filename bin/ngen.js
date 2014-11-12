@@ -10,6 +10,11 @@ var Template = require('../index.js');
 
 module.exports = main;
 
+var
+  COMMAND   = 'npmgenerate',
+  TEMPLATE  = '../../../'
+;
+
 function printHelp(opts) {
     opts = opts || {};
 
@@ -17,11 +22,11 @@ function printHelp(opts) {
     var content = fs.readFileSync(loc, 'utf8');
 
     content = template(content, {
-        cmd: opts.cmd || 'uber-ngen',
-        template: opts.template || 'uber',
+        cmd: opts.cmd || COMMAND,
+        template: opts.template || TEMPLATE,
         options: opts.usageOptions || '',
         defaults: opts.usageDefaults || '',
-        directoryName: opts.directoryName || 'uber-ngen/templates'
+        directoryName: opts.directoryName || '../../../' // a generator can have many templates to choose from
     });
 
     return console.log(msee.parse(content, {
@@ -38,7 +43,7 @@ function main(opts, callback) {
         return callback();
     }
 
-    opts.template = opts.t || opts.template || 'uber';
+    opts.template = opts.t || opts.template || TEMPLATE;
     opts.templates = opts.d || opts.directory ||
         path.join(__dirname, '..', 'templates');
     opts.name = opts.name || opts._[0];

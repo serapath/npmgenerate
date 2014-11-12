@@ -1,24 +1,25 @@
 {
-  "name": "uber-ngen",
-  "version": "3.11.3",
+  "name": "npmgenerate",
+  "version": "0.0.1",
   "description": "Package generator (structure, changelogs, tests, package.json, etc)",
-  "keywords": [],
+  "keywords": ["generator", "generate", "yo", "ngen", "scaffold", "boilerplate"],
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/uber/uber-ngen.git"
+    "url": "git://github.com/serapath/npmgenerate.git"
   },
   "main": "index",
-  "homepage": "https://github.com/uber/uber-ngen",
+  "homepage": "https://github.com/serapath/npmgenerate",
   "bugs": {
-    "url": "https://github.com/uber/uber-ngen/issues",
-    "email": "raynos2@gmail.com"
+    "url": "https://github.com/serapath/npmgenerate/issues",
+    "email": "dev@serapath.de"
   },
   "contributors": [
     "Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)",
     "Raynos <raynos2@gmail.com>",
     "dfellis <d.f.ellis@ieee.org>",
-    "twolfson <todd@twolfson.com>"
+    "twolfson <todd@twolfson.com>",
+    "serapath <dev@serapath.de>"
   ],
   "dependencies": {
     "camelize": "~0.1.2",
@@ -33,15 +34,15 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/uber/uber-ngen/raw/master/LICENCE"
+      "url": "http://github.com/serapath/npmgenerate/raw/master/LICENCE"
     }
   ],
   "scripts": {
     "test": "npm run jshint",
-    "jshint": "jshint --verbose --exclude-path .gitignore --exclude templates/uber/content ."
+    "jshint": "jshint --verbose --exclude-path .gitignore --exclude templates/serapath/content ."
   },
   "bin": {
-    "uber-ngen": "./bin/ngen.js"
+    "npmgenerate": "./bin/ngen.js"
   },
   "devDependencies": {
     "jshint": "~2.4.4",

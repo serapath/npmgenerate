@@ -1,13 +1,13 @@
-# uber-ngen
+# npmgenerate
 
-`uber-ngen` is a scaffolding module used to scaffold out
+`npmgenerate` is a scaffolding module used to scaffold out
   any kind of project.
 
 ## Creating a template for ngen
 
 `ngen` is a tool that creates the new files for your project.
 
-You author an `ngen` template and you can then use `ngen` to 
+You author an `ngen` template and you can then use `ngen` to
   create a new folder based on the template.
 
 An `ngen` template is a folder with an `index.js` and a `content`
@@ -32,7 +32,7 @@ One of the simplest content folders might look like
         {{project}}.js
 ```
 
-You basically specify what kind of files you want in a 
+You basically specify what kind of files you want in a
   new project.
 
 Note that the content of a template can contain nested folders
@@ -84,7 +84,7 @@ Here we are saying that this template will have two variables
 When you specify your variables they can be either a string or
   a function.
 
-If the variable definition is a string then we 
+If the variable definition is a string then we
   will asynchronously prompt the user with the string and then
   assign the user input on the CLI into that variable.
 
@@ -100,10 +100,10 @@ We will call your functions in property order on your
 
 ## Docs
 
-`uber-ngen` can also be called directly
+`npmgenerate` can also be called directly
 
 ```js
-var ngen = require('uber-ngen/bin/ngen.js')
+var ngen = require('npmgenerate/bin/ngen.js')
 
 ngen({
     directory: '/directory/to/template',
@@ -125,22 +125,22 @@ You can pass an `update-json` boolean to `Template` i.e.
 var t = Template(name, { "update-json": true })
 ```
 
-Or 
+Or
 
 ```sh
-uber-ngen --update-json=true
+npmgenerate --update-json=true
 ```
 
 Normally the scaffolder will not overwrite existing files in
   the destination folder.
 
-If you set `--update-json` to true, the scaffolder will 
+If you set `--update-json` to true, the scaffolder will
   overwrite existing JSON files in the destination folder.
 
 The way it overwrites is by merging the new version of the JSON
   file from the scaffolder into the destination folder.
 
-It is not recommended you commit these new JSON files, the 
+It is not recommended you commit these new JSON files, the
   scaffolder will probably have overwritten or deleted JSON
   fields you wanted to keep. It's recommended you use
   `git add -p` to cherry pick the new changes you want from the
@@ -148,11 +148,8 @@ It is not recommended you commit these new JSON files, the
 
 ## Installation
 
-`npm install uber-ngen`
+`npm install npmgenerate`
 
 ## MIT Licenced
 
-  [usage]: https://github.com/uber/uber-ngen/tree/master/bin/usage.md
-
-
-
+  [usage]: https://github.com/serapath/npmgenerate/tree/master/bin/usage.md
