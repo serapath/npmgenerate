@@ -22,7 +22,7 @@ An `ngen` template is a folder with an `index.js` and a `content`
 ### Jobs
 
 @TODO: make npmgenerate a scaffolder for a new "npmgenerate-*" cli tool
-
+@TODO: integrate pre-commit-hook script for jshint in all scaffolds
 
 ### The `content` folder.
 

@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "test": "npm run jshint",
-    "jshint": "jshint --verbose --exclude-path .gitignore --exclude templates/serapath/content ."
+    "jshint": "jshint --verbose --exclude-path .gitignore --exclude example/uber/content ."
   },
   "bin": {
     "npmgenerate": "./bin/ngen.js"
