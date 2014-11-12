@@ -19,6 +19,11 @@ An `ngen` template is a folder with an `index.js` and a `content`
     index.js
 ```
 
+### Jobs
+
+@TODO: make npmgenerate a scaffolder for a new "npmgenerate-*" cli tool
+
+
 ### The `content` folder.
 
 One of the simplest content folders might look like
